@@ -1,0 +1,12 @@
+<h1>Agendas</h1>
+{% for Agenda in object_list %}
+    {% if Agenda.tipo_Agenda == False %}
+        <div>
+            <h2> Nome do Compromisso: {{ Agenda.tipo_compromisso }}</h2>
+            <p> Nome do Usuario: {{ Agenda.usuario | linebreaksbr }}</p>
+            <p> Data do Compromisso: {{ Agenda.data_compromisso | linebreaksbr }}</p>
+            <p> Agenda Privada: {{ Agenda.tipo_Agenda | linebreaksbr }}</p>
+            <br>
+        </div>
+        {% endif %}
+{% endfor %}
